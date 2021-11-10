@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h4 class="mt-4 display-4">Editar datos de persona</h4>
+  </div>
+
+  <div class="row justify-content-center">
+    <%= form_with(model: @person, local: true) do |form| %>   
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                    <div class="panel-body">
+    
+                        <div class="form-group">
+                            <%= form.label :nombre %>
+                            <%= form.text_field :nombre, class: 'form-control' %>
+                        </div>
+    
+                        <div class="form-group">
+                            <%= form.label :apellido %>
+                            <%= form.text_field :apellido, class: 'form-control' %>
+                        </div>
+
+                        <div class="form-group">
+                            <%= form.label :cui %>
+                            <%= form.text_field :cui, class: 'form-control' %>
+                        </div>
+
+    
+                        <button type="submit" class="btn btn-info">Guardar</button>
+                        <%= link_to 'Cancelar', url_for(:back), class: "btn btn-warning" %> 
+                            <br>
+                            <br>
+    
+                    </div>
+                </section>
+            </div>
+        </div>
+    <% end %>
+    </div>
+</div>
